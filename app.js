@@ -41,7 +41,7 @@ $$('.form').forEach(function(f){
     var data={};new FormData(f).forEach(function(v,k){if(k!=='_gotcha')data[k]=v});
     fetch(FORMSPREE,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
       .then(function(r){if(!r.ok)throw 0;msg.textContent=f.dataset.ok;f.reset()})
-      .catch(function(){msg.className='fmsg err';msg.textContent='Échec de l\'envoi. Écris-nous à contact@alternatifevent.fr.'})
+      .catch(function(){msg.className='fmsg err';msg.textContent='Échec de l\'envoi. Écris-nous à contact@alternatif-event.com.'})
       .then(function(){btn.disabled=false});
   });
 });

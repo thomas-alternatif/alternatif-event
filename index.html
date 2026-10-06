@@ -101,7 +101,7 @@
     <button class="btn" type="submit">Envoyer</button>
     <p class="fm" id="fm" role="status"></p>
   </form>
-  <p class="ct-alt">ou directement : <a href="mailto:contact@alternatifevent.fr">contact@alternatifevent.fr</a></p>
+  <p class="ct-alt">ou directement : <a href="mailto:contact@alternatif-event.com">contact@alternatif-event.com</a></p>
 </section>
 
 <footer class="ft">
@@ -157,7 +157,7 @@
     var d={};new FormData(f).forEach(function(v,k){if(k!=='_gotcha')d[k]=v});
     fetch('https://formspree.io/f/mwvrgkgb',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
       .then(function(r){if(!r.ok)throw 0;m.textContent='Merci, message envoyé !';f.reset()})
-      .catch(function(){m.className='fm err';m.textContent="Échec de l'envoi. Écris-nous à contact@alternatifevent.fr."})
+      .catch(function(){m.className='fm err';m.textContent="Échec de l'envoi. Écris-nous à contact@alternatif-event.com."})
       .then(function(){btn.disabled=false});
   });
 })();
