@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito+Sans:wght@300;400&display=swap">
-<link rel="stylesheet" href="wix.css?v=1">
+<link rel="stylesheet" href="wix.css?v=2">
 </head>
 <body>
 <header class="hd">
@@ -30,8 +30,8 @@
 <main>
 <section class="hero" id="accueil">
   <h1>Alternatif<br>Event</h1>
-  <p class="s1"><span>+</span>Découvrez des sons uniques</p>
-  <p class="s2">Expériences musicales inédites</p>
+  <p class="s1"><i class="pl"></i>Découvrez des sons uniques</p>
+  <p class="s2"><i class="pl"></i>Expériences musicales inédites</p>
 </section>
 
 <section class="ev" id="agenda">
@@ -39,47 +39,59 @@
   <p>Pas d'événements pour le moment</p>
 </section>
 
-<section class="fo" id="asso">
-  <h2 class="gold">Qui sommes nous ?</h2>
-  <div class="qs">
-    <img src="img/logo-ligne.png" alt="Logo Alternatif Event">
-    <p>Alternatif Event est une association dédiée à la création d'événements musicaux alternatifs. Ici, tout se construit de A à Z : des décors aux scènes, en passant par une programmation audacieuse mettant en avant des artistes émergents. Notre objectif ? Offrir des expériences uniques, où la musique, la créativité et l'engagement collectif se rencontrent pour donner vie à des événements hors du commun.</p>
-  </div>
+<div class="fo" id="asso">
+  <div class="fo-bg" aria-hidden="true"></div>
+  <section class="qs-s">
+    <h2 class="gold">Qui sommes nous ?</h2>
+    <div class="qs">
+      <img src="img/logo-ligne.png" alt="Logo Alternatif Event">
+      <p>Alternatif Event est une association dédiée à la création d'événements musicaux alternatifs. Ici, tout se construit de A à Z : des décors aux scènes, en passant par une programmation audacieuse mettant en avant des artistes émergents. Notre objectif ? Offrir des expériences uniques, où la musique, la créativité et l'engagement collectif se rencontrent pour donner vie à des événements hors du commun.</p>
+    </div>
+  </section>
 
-  <h3 class="sv-t">Nos services</h3>
-  <div class="sv">
-    <article><img src="img/manifeste.webp" alt="La foule des concerts nocturnes" loading="lazy"><h4>Scène &amp; sonorisation</h4><p>Installation complète des équipements scéniques et techniques pour vos événements.</p></article>
-    <article><img src="img/bar.webp" alt="Bar" loading="lazy"><h4>Bar</h4><p>Service des boissons pensé pour l'ambiance, pas juste pour la soif.</p></article>
-    <article><img src="img/artisan.webp" alt="Conception artisanale" loading="lazy"><h4>Conception artisanale</h4><p>Décors sur mesure, construction de scène — fait main, pas en kit.</p></article>
-    <article><img src="img/collab.webp" alt="Collaborations" loading="lazy"><h4>Collaborations</h4><p>Partenariats avec les mairies, commerces et structures locales.</p></article>
-  </div>
+  <section class="sv-s">
+    <h3 class="sv-t">Nos services</h3>
+    <div class="sv">
+      <article><img src="img/sv1.webp" alt="" loading="lazy"><div><h4>Scène &amp; sonorisation</h4><p>Installation des équipements</p></div></article>
+      <article><img src="img/sv2.webp" alt="" loading="lazy"><div><h4>Bar</h4><p>Service des boissons</p></div></article>
+      <article><img src="img/sv3.webp" alt="" loading="lazy"><div><h4>Conception artisanal</h4><p>Décors sur mesure, construction de scène, bar, mobilier d'accueil…</p></div></article>
+      <article><img src="img/sv4.webp" alt="" loading="lazy"><div><h4>Collaborations</h4><p>Travail en partenariat avec les mairies et commerces</p></div></article>
+    </div>
+  </section>
 
-  <h2 class="ph" id="passes">Événements passés</h2>
-  <div class="past">
-    <figure><img src="img/affiche-automne.webp" alt="Concert d'Automne" loading="lazy"><figcaption><b>Concert d'Automne</b>15 novembre 2025 · Espace culturel René Fontanilles, Saint-Paul-sur-Save</figcaption></figure>
-    <figure><img src="img/affiche-scene.webp" alt="Scène Ouverte" loading="lazy"><figcaption><b>Scène Ouverte</b>20 juin 2025 · Place du Village, Fête de la Musique</figcaption></figure>
-    <figure><img src="img/affiche-flor.webp" alt="Le Flor Festival" loading="lazy"><figcaption><b>Le Flor Festival</b>22 juin 2024 · Saint-Paul-sur-Save, participation libre</figcaption></figure>
-  </div>
+  <section class="pas-s" id="passes">
+    <h2 class="ph">Événements passés</h2>
+    <div class="past">
+      <figure><img src="img/affiche-automne.webp" alt="Concert d'Automne" loading="lazy"><figcaption><b>Concert d'Automne</b>15 novembre 2025 · Espace culturel René Fontanilles, Saint-Paul-sur-Save</figcaption></figure>
+      <figure><img src="img/affiche-scene.webp" alt="Scène Ouverte" loading="lazy"><figcaption><b>Scène Ouverte</b>20 juin 2025 · Place du Village, Fête de la Musique</figcaption></figure>
+      <figure><img src="img/affiche-flor.webp" alt="Le Flor Festival" loading="lazy"><figcaption><b>Le Flor Festival</b>22 juin 2024 · Saint-Paul-sur-Save, participation libre</figcaption></figure>
+    </div>
+  </section>
 
-  <h2 class="ph">Photothèque</h2>
-  <div class="roll" aria-label="Photothèque"><div class="rl" id="rl"></div></div>
+  <div class="wave" aria-hidden="true"><img src="img/wave.svg" alt=""></div>
 
-  <h2 class="ph" id="don">Faire un don</h2>
+  <section class="ph-s">
+    <h2 class="ph2">Photothèque</h2>
+    <div class="roll" aria-label="Photothèque"><div class="rl" id="rl"></div></div>
+  </section>
+</div>
+
+<section class="don-s" id="don">
+  <h2 class="ph">Faire un don</h2>
   <p class="dn">Alternatif Event est 100 % bénévole. Ton soutien finance directement la sono, les décors et les prochaines dates.</p>
   <a class="btn" href="https://www.helloasso.com/associations/alternatif-event/formulaires/1" target="_blank" rel="noopener">Faire un don via HelloAsso</a>
 </section>
 
 <footer class="ft">
-  <img src="img/g15.webp" alt="" loading="lazy">
+  <img src="img/logo.png" alt="Alternatif">
   <a href="mailto:contact@alternatifevent.fr">contact@alternatifevent.fr</a>
-  <p>Alternatif Event – Association loi 1901<br>Siège social : 843, Route de Grenade, 31530 Saint-Paul-sur-Save<br>SIRET : 944 737 931 00013 &nbsp;&nbsp;&nbsp; RNA : W313040299</p>
-  <p>© 2025 Alternatif Event – Tous droits réservés.</p>
+  <p>Alternatif Event – Association loi 1901<br>Siège social : 843, Route de Grenade, 31530 Saint-Paul-sur-Save<br>SIRET : 944 737 931 00013 &nbsp;&nbsp;&nbsp; RNA : W313040299<br>© 2025 Alternatif Event – Tous droits réservés.</p>
 </footer>
 </main>
 <script>
 (function(){
   var rl=document.getElementById('rl'),h='';
-  for(var k=0;k<2;k++)for(var i=1;i<=15;i++)h+='<img src="img/g'+(i<10?'0':'')+i+'.webp" alt="" loading="lazy">';
+  var ord=[1,4,16,3,6,7,12,5,2,8,9,10,11,13,14,15];for(var k=0;k<2;k++)ord.forEach(function(i){h+='<img src="img/g'+(i<10?'0':'')+i+'.webp" alt="" loading="lazy">'});
   rl.innerHTML=h;
   var b=document.getElementById('bg'),n=document.getElementById('nav');
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
