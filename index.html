@@ -155,7 +155,7 @@
     if(!f.checkValidity()){m.className='fm err';m.textContent='Remplis ton nom, un e-mail valide et ton message.';f.reportValidity();return}
     var btn=f.querySelector('button');btn.disabled=true;m.className='fm';m.textContent='Envoi…';
     var d={};new FormData(f).forEach(function(v,k){if(k!=='_gotcha')d[k]=v});
-    fetch('https://formspree.io/f/mwvrgkgb',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+    fetch('https://formspree.io/f/mbgdddkg',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
       .then(function(r){if(!r.ok)throw 0;m.textContent='Merci, message envoyé !';f.reset()})
       .catch(function(){m.className='fm err';m.textContent="Échec de l'envoi. Écris-nous à contact@alternatif-event.com."})
       .then(function(){btn.disabled=false});

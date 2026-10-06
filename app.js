@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
-var FORMSPREE='https://formspree.io/f/mwvrgkgb';
+var FORMSPREE='https://formspree.io/f/mbgdddkg';
 
 /* compteur */
 var d=Math.floor((Date.now()-new Date('2024-06-22').getTime())/864e5);
