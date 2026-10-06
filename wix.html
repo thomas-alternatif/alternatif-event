@@ -9,17 +9,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito+Sans:wght@300;400&display=swap">
-<link rel="stylesheet" href="wix.css?v=3">
+<link rel="stylesheet" href="wix.css?v=4">
 </head>
 <body>
+<a class="skip" href="#asso">Aller au contenu</a>
 <header class="hd">
   <a class="logo" href="#accueil">ALTERNATIF EVENT</a>
   <button class="bg" id="bg" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
   <nav class="nav" id="nav">
     <a class="on" href="#accueil">Accueil</a>
     <a href="#asso">Qui sommes nous</a>
-    <a href="#passes">Artistes à l'affiche</a>
+    <a href="#passes">Événements passés</a>
+    <a href="#photos">Photos</a>
     <a href="#don">Faire un don</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 <aside class="soc">
@@ -32,11 +35,14 @@
   <h1>Alternatif<br>Event</h1>
   <p class="s1"><i class="pl"></i>Découvrez des sons uniques</p>
   <p class="s2"><i class="pl"></i>Expériences musicales inédites</p>
+  <div class="cta"><a class="btn" href="#passes">Nos événements</a><a class="btn ghost" href="#contact">Nous contacter</a></div>
 </section>
 
 <section class="ev" id="agenda">
   <h2>à venirs</h2>
-  <p>Pas d'événements pour le moment</p>
+  <p>Pas d'événement annoncé pour le moment.</p>
+  <p class="ev2">Pour être prévenu de la prochaine date, suis-nous :</p>
+  <div class="ev-b"><a class="btn" href="https://www.instagram.com/alternatif_event" target="_blank" rel="noopener">Instagram</a><a class="btn" href="https://www.facebook.com/profile.php?id=61575025795346" target="_blank" rel="noopener">Facebook</a></div>
 </section>
 
 <div class="fo" id="asso">
@@ -62,18 +68,19 @@
   <section class="pas-s" id="passes">
     <h2 class="ph">Événements passés</h2>
     <div class="past">
-      <figure><img src="img/affiche-fete26.webp" alt="Fête de la Musique 2026" loading="lazy"><figcaption><b>Fête de la Musique</b>20 juin 2026 · Place du Village, brass band Sav'en Voix, scène ouverte &amp; jam session</figcaption></figure>
-      <figure><img src="img/affiche-automne.webp" alt="Concert d'Automne" loading="lazy"><figcaption><b>Concert d'Automne</b>15 novembre 2025 · Espace culturel René Fontanilles, Saint-Paul-sur-Save</figcaption></figure>
-      <figure><img src="img/affiche-scene.webp" alt="Scène Ouverte" loading="lazy"><figcaption><b>Scène Ouverte</b>20 juin 2025 · Place du Village, Fête de la Musique</figcaption></figure>
-      <figure><img src="img/affiche-flor.webp" alt="Le Flor Festival" loading="lazy"><figcaption><b>Le Flor Festival</b>22 juin 2024 · Saint-Paul-sur-Save, participation libre</figcaption></figure>
+      <figure><button type="button" class="zm" data-src="img/affiche-fete26.webp" aria-label="Agrandir l\'affiche : Fête de la Musique 2026"><img src="img/affiche-fete26.webp" alt="Fête de la Musique 2026" loading="lazy"></button><figcaption><b>Fête de la Musique</b>20 juin 2026 · Place du Village, brass band Sav'en Voix, scène ouverte &amp; jam session</figcaption></figure>
+      <figure><button type="button" class="zm" data-src="img/affiche-automne.webp" aria-label="Agrandir l\'affiche : Concert d'Automne"><img src="img/affiche-automne.webp" alt="Concert d'Automne" loading="lazy"></button><figcaption><b>Concert d'Automne</b>15 novembre 2025 · Espace culturel René Fontanilles, Saint-Paul-sur-Save</figcaption></figure>
+      <figure><button type="button" class="zm" data-src="img/affiche-scene.webp" aria-label="Agrandir l\'affiche : Scène Ouverte"><img src="img/affiche-scene.webp" alt="Scène Ouverte" loading="lazy"></button><figcaption><b>Scène Ouverte</b>20 juin 2025 · Place du Village, Fête de la Musique</figcaption></figure>
+      <figure><button type="button" class="zm" data-src="img/affiche-flor.webp" aria-label="Agrandir l\'affiche : Le Flor Festival"><img src="img/affiche-flor.webp" alt="Le Flor Festival" loading="lazy"></button><figcaption><b>Le Flor Festival</b>22 juin 2024 · Saint-Paul-sur-Save, participation libre</figcaption></figure>
     </div>
   </section>
 
   <div class="wave" aria-hidden="true"><img src="img/wave.svg" alt=""></div>
 
-  <section class="ph-s">
+  <section class="ph-s" id="photos">
     <h2 class="ph2">Photothèque</h2>
-    <div class="roll" aria-label="Photothèque"><div class="rl" id="rl"></div></div>
+    <div class="roll"><button class="ar l" id="rp" type="button" aria-label="Photos précédentes">‹</button><div class="rl" id="rl" tabindex="0" aria-label="Photothèque : fais défiler"></div><button class="ar r" id="rn" type="button" aria-label="Photos suivantes">›</button></div>
+    <p class="hint">Touche une photo pour l'agrandir</p>
   </section>
 </div>
 
@@ -83,23 +90,77 @@
   <a class="btn" href="https://www.helloasso.com/associations/alternatif-event/formulaires/1" target="_blank" rel="noopener">Faire un don via HelloAsso</a>
 </section>
 
+<section class="ct-s" id="contact">
+  <h2 class="ph">Contact</h2>
+  <p class="dn">Une idée, une question, l'envie de donner un coup de main ? Écris-nous, on répond vite.</p>
+  <form class="ct" id="ct" novalidate>
+    <label for="c-n">Ton nom</label><input id="c-n" name="nom" autocomplete="name" required>
+    <label for="c-e">Ton e-mail</label><input id="c-e" name="email" type="email" autocomplete="email" required>
+    <label for="c-m">Ton message</label><textarea id="c-m" name="message" rows="5" required></textarea>
+    <input class="hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn" type="submit">Envoyer</button>
+    <p class="fm" id="fm" role="status"></p>
+  </form>
+  <p class="ct-alt">ou directement : <a href="mailto:contact@alternatifevent.fr">contact@alternatifevent.fr</a></p>
+</section>
+
 <footer class="ft">
   <img src="img/logo.png" alt="Alternatif">
-  <a href="mailto:contact@alternatifevent.fr">contact@alternatifevent.fr</a>
-  <p>Alternatif Event – Association loi 1901<br>Siège social : 843, Route de Grenade, 31530 Saint-Paul-sur-Save<br>SIRET : 944 737 931 00013 &nbsp;&nbsp;&nbsp; RNA : W313040299<br>© 2025 Alternatif Event – Tous droits réservés.</p>
+  <div class="ft-s"><a href="https://www.instagram.com/alternatif_event" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61575025795346" target="_blank" rel="noopener">Facebook</a><a href="https://www.helloasso.com/associations/alternatif-event/formulaires/1" target="_blank" rel="noopener">HelloAsso</a></div>
+  <p>Alternatif Event – Association loi 1901<br>Siège social : 843, Route de Grenade, 31530 Saint-Paul-sur-Save<br>SIRET : 944 737 931 00013 &nbsp;&nbsp;&nbsp; RNA : W313040299<br>© 2026 Alternatif Event – Tous droits réservés.</p>
 </footer>
 </main>
 <script>
 (function(){
-  var rl=document.getElementById('rl'),h='';
-  var ord=[1,4,16,3,6,7,12,5,2,8,9,10,11,13,14,15],E=15,list=[];for(var e=1;e<=E;e++)list.push('e'+(e<10?'0':'')+e);ord.forEach(function(i){list.push('g'+(i<10?'0':'')+i)});for(var k=0;k<2;k++)list.forEach(function(f){h+='<img src="img/'+f+'.webp" alt="" loading="lazy">'});
+  var $=function(s){return document.querySelector(s)};
+  var rl=$('#rl'),list=[],h='';
+  var ord=[1,4,16,3,6,7,12,5,2,8,9,10,11,13,14,15];
+  for(var e=1;e<=15;e++)list.push('img/e'+(e<10?'0':'')+e+'.webp');
+  ord.forEach(function(i){list.push('img/g'+(i<10?'0':'')+i+'.webp')});
+  list.forEach(function(s,k){h+='<button type="button" data-k="'+k+'" aria-label="Agrandir la photo '+(k+1)+'"><img src="'+s+'" alt="" loading="lazy"></button>'});
   rl.innerHTML=h;
-  var b=document.getElementById('bg'),n=document.getElementById('nav');
-  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-  n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.remove('open')});
+  function step(d){rl.scrollBy({left:d*rl.clientWidth*.8,behavior:'smooth'})}
+  $('#rp').onclick=function(){step(-1)};$('#rn').onclick=function(){step(1)};
+  /* lightbox : photos + affiches */
+  var lb=$('#lb'),li=$('#lbi'),set=[],cur=0,last;
+  function show(){li.src=set[cur]}
+  function open(arr,k){set=arr;cur=k;last=document.activeElement;show();lb.hidden=false;document.body.style.overflow='hidden';$('.lx').focus()}
+  function close(){lb.hidden=true;document.body.style.overflow='';if(last)last.focus()}
+  function go(d){cur=(cur+d+set.length)%set.length;show()}
+  rl.addEventListener('click',function(ev){var b=ev.target.closest('button');if(b)open(list,+b.dataset.k)});
+  var posters=[].slice.call(document.querySelectorAll('.zm'));
+  var ps=posters.map(function(p){return p.dataset.src});
+  posters.forEach(function(p,k){p.onclick=function(){open(ps,k)}});
+  $('.lx').onclick=close;$('.lp').onclick=function(){go(-1)};$('.ln').onclick=function(){go(1)};
+  lb.addEventListener('click',function(ev){if(ev.target===lb)close()});
+  addEventListener('keydown',function(ev){if(lb.hidden)return;if(ev.key==='Escape')close();if(ev.key==='ArrowRight')go(1);if(ev.key==='ArrowLeft')go(-1)});
+  var tx=0;lb.addEventListener('touchstart',function(ev){tx=ev.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(ev){var d=ev.changedTouches[0].clientX-tx;if(Math.abs(d)>50)go(d<0?1:-1)});
+  /* menu */
+  var b=$('#bg'),n=$('#nav'),hd=$('.hd');
+  function menu(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o)}
+  b.addEventListener('click',function(){menu(!n.classList.contains('open'))});
+  n.addEventListener('click',function(ev){if(ev.target.tagName==='A')menu(false)});
+  addEventListener('keydown',function(ev){if(ev.key==='Escape')menu(false)});
+  /* en-tête plein dès qu'on a quitté le haut + lien actif */
   var links=[].slice.call(n.querySelectorAll('a'));
-  addEventListener('scroll',function(){var y=scrollY+200,cur=0;links.forEach(function(a,i){var t=document.querySelector(a.getAttribute('href'));if(t&&t.offsetTop<=y)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)})},{passive:true});
+  function sc(){hd.classList.toggle('solid',scrollY>40);var y=scrollY+180,cur=0;links.forEach(function(a,i){var t=document.querySelector(a.getAttribute('href'));if(t&&t.getBoundingClientRect().top+scrollY<=y)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)})}
+  addEventListener('scroll',sc,{passive:true});sc();
+  /* contact */
+  var f=$('#ct'),m=$('#fm');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(f.querySelector('.hp').value)return;
+    if(!f.checkValidity()){m.className='fm err';m.textContent='Remplis ton nom, un e-mail valide et ton message.';f.reportValidity();return}
+    var btn=f.querySelector('button');btn.disabled=true;m.className='fm';m.textContent='Envoi…';
+    var d={};new FormData(f).forEach(function(v,k){if(k!=='_gotcha')d[k]=v});
+    fetch('https://formspree.io/f/mwvrgkgb',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+      .then(function(r){if(!r.ok)throw 0;m.textContent='Merci, message envoyé !';f.reset()})
+      .catch(function(){m.className='fm err';m.textContent="Échec de l'envoi. Écris-nous à contact@alternatifevent.fr."})
+      .then(function(){btn.disabled=false});
+  });
 })();
 </script>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo agrandie"><button class="lx" type="button" aria-label="Fermer">×</button><button class="lp" type="button" aria-label="Précédente">‹</button><img id="lbi" alt=""><button class="ln" type="button" aria-label="Suivante">›</button></div>
 </body>
 </html>
