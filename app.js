@@ -47,11 +47,11 @@ $$('.form').forEach(function(f){
 });
 
 /* galerie + lightbox */
-var NG=15,strip=$('#strip'),cur=0;
+var NG=30,strip=$('#strip'),cur=0;
 var alts=['Chanteuse à la guitare','Festival en plein jour','Chanteur sur scène bleue','Rappeur en concert','Public et violon','Rappeur sur scène','DJ en soirée','Chanteur au clavier','Rappeur sous les lumières','Guitariste','Décors du festival','Rappeur en concert','Portrait de scène','Scène du festival','Scène rouge et bleue'];
-for(var i=1;i<=NG;i++){
+var EV=15;for(var i=1;i<=NG;i++){
   var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Agrandir la photo '+i);
-  var im=document.createElement('img');im.src='img/g'+(i<10?'0':'')+i+'.webp';im.alt=alts[i-1];im.loading='lazy';
+  var im=document.createElement('img');var j=i<=EV?i:i-EV;im.src='img/'+(i<=EV?'e':'g')+(j<10?'0':'')+j+'.webp';im.alt=i<=EV?'Fête de la Musique, 20 juin 2026':alts[j-1];im.loading='lazy';
   b.appendChild(im);(function(n){b.addEventListener('click',function(){lbOpen(n)})})(i-1);strip.appendChild(b);
 }
 var lb=$('#lb'),lbi=$('#lb-img');

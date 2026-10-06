@@ -102,7 +102,7 @@ h2{font-size:clamp(46px,8vw,118px)}
 .bc-blue img,.bc-gold img,.bc-purple img{mix-blend-mode:normal;opacity:1}
 
 /* passés */
-.past{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
+.past{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
 .pa{display:flex;flex-direction:column;gap:16px}
 .pa img{border-radius:calc(var(--rad)*.5);width:100%;aspect-ratio:800/1131;object-fit:cover;transition:transform .35s}
 .pa:hover img{transform:scale(1.015) rotate(-.4deg)}
@@ -185,7 +185,7 @@ h2{font-size:clamp(46px,8vw,118px)}
   .manif,.don,.contact{grid-template-columns:1fr}
   .manif-img{aspect-ratio:4/3}
   .bento{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .past{grid-template-columns:1fr;max-width:420px}
+  .past{grid-template-columns:repeat(2,minmax(0,1fr))}
   .duo{grid-template-columns:1fr}
   .hero{min-height:88svh}
 }
@@ -205,3 +205,5 @@ h2{font-size:clamp(46px,8vw,118px)}
   .bc img{max-width:none;position:relative;margin:22px calc(-1*clamp(20px,2vw,30px)) calc(-1*clamp(20px,2vw,30px));width:calc(100% + 2*clamp(20px,2vw,30px));height:170px;margin-top:auto;flex:0 0 auto}
   .bc p{margin-bottom:22px}
 }
+
+@media(max-width:520px){.past{grid-template-columns:1fr;max-width:420px}}

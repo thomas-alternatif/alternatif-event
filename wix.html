@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito+Sans:wght@300;400&display=swap">
-<link rel="stylesheet" href="wix.css?v=2">
+<link rel="stylesheet" href="wix.css?v=3">
 </head>
 <body>
 <header class="hd">
@@ -62,6 +62,7 @@
   <section class="pas-s" id="passes">
     <h2 class="ph">Événements passés</h2>
     <div class="past">
+      <figure><img src="img/affiche-fete26.webp" alt="Fête de la Musique 2026" loading="lazy"><figcaption><b>Fête de la Musique</b>20 juin 2026 · Place du Village, brass band Sav'en Voix, scène ouverte &amp; jam session</figcaption></figure>
       <figure><img src="img/affiche-automne.webp" alt="Concert d'Automne" loading="lazy"><figcaption><b>Concert d'Automne</b>15 novembre 2025 · Espace culturel René Fontanilles, Saint-Paul-sur-Save</figcaption></figure>
       <figure><img src="img/affiche-scene.webp" alt="Scène Ouverte" loading="lazy"><figcaption><b>Scène Ouverte</b>20 juin 2025 · Place du Village, Fête de la Musique</figcaption></figure>
       <figure><img src="img/affiche-flor.webp" alt="Le Flor Festival" loading="lazy"><figcaption><b>Le Flor Festival</b>22 juin 2024 · Saint-Paul-sur-Save, participation libre</figcaption></figure>
@@ -91,7 +92,7 @@
 <script>
 (function(){
   var rl=document.getElementById('rl'),h='';
-  var ord=[1,4,16,3,6,7,12,5,2,8,9,10,11,13,14,15];for(var k=0;k<2;k++)ord.forEach(function(i){h+='<img src="img/g'+(i<10?'0':'')+i+'.webp" alt="" loading="lazy">'});
+  var ord=[1,4,16,3,6,7,12,5,2,8,9,10,11,13,14,15],E=15,list=[];for(var e=1;e<=E;e++)list.push('e'+(e<10?'0':'')+e);ord.forEach(function(i){list.push('g'+(i<10?'0':'')+i)});for(var k=0;k<2;k++)list.forEach(function(f){h+='<img src="img/'+f+'.webp" alt="" loading="lazy">'});
   rl.innerHTML=h;
   var b=document.getElementById('bg'),n=document.getElementById('nav');
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
