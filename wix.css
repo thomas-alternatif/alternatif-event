@@ -132,3 +132,4 @@ a{color:inherit}
 .lx{top:16px;right:16px}.lp{left:14px;top:calc(50% - 26px)}.ln{right:14px;top:calc(50% - 26px)}
 @media(max-width:900px){.hd.solid{height:62px}.nav a{font-size:17px}.ar{display:none}.rl img{width:clamp(130px,38vw,200px)}.lp,.ln{top:auto;bottom:18px}.lp{left:calc(50% - 64px)}.ln{right:calc(50% - 64px)}}
 @media(max-width:520px){.cta .btn{flex:1 1 100%;text-align:center}}
+@media(min-width:901px){.ar.r{right:64px}}
