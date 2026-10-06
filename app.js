@@ -64,6 +64,22 @@ $('.lb-p').addEventListener('click',function(){lbGo(-1)});
 $('.lb-nx').addEventListener('click',function(){lbGo(1)});
 lb.addEventListener('click',function(e){if(e.target===lb)lbClose()});
 
+/* agenda live (laSave) — repli statique si l'API est injoignable */
+var MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function days(a,b){return (new Date(b)-new Date(a))/864e5}
+fetch('https://go.la-save.fr/events').then(function(r){return r.json()}).then(function(j){
+  var l=Array.isArray(j)?j:(j.events||[]),t=new Date().toISOString().slice(0,10);
+  l=l.filter(function(e){return e.Date&&e.Date>=t&&(!e['Date de fin']||days(e.Date,e['Date de fin'])<120)})
+     .sort(function(a,b){return a.Date<b.Date?-1:1}).slice(0,6);
+  if(!l.length)return;
+  var h='<div class="ag-list">'+l.map(function(e){
+    var x=e.Date.split('-');
+    return '<a class="ag-c" href="https://la-save.fr" target="_blank" rel="noopener"><time>'+(+x[2])+' '+MOIS[x[1]-1]+(e.Heure?' · '+esc(e.Heure):'')+'</time><h3>'+esc(e.Titre)+'</h3><p>'+esc(e.Lieu||e.Commune||'')+'</p></a>'}).join('')+'</div>'
+    +'<div class="row ag-more"><a class="pill pill-g" href="https://la-save.fr" target="_blank" rel="noopener">Tout l\'agenda sur laSave ↗</a></div>';
+  $('#ag').innerHTML=h;
+}).catch(function(){});
+
 /* reveal (≥ 901px) */
 if(innerWidth>900&&'IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
   var els=$$('.sec-h,.manif-q,.bc,.pa,.dc,.don-l,.don-r,.ct-l,.form:not(.m-box .form)');
